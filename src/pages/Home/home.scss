@@ -1,0 +1,47 @@
+.home {
+    margin: 0em 5em 3em 5em;
+    background-color: black;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 25px;
+    position: relative;
+}
+.banner-bord-de-mer {
+    height: 223px;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    opacity: 50%;
+}
+h1 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 48px;
+    text-shadow: 1px 1px 4px black;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+@media screen and (max-width: 767px){
+    .home {
+        margin: 1em;
+    }
+    .banner-bord-de-mer {
+        height: 7em;        
+    }
+    h1 {
+        font-size: 24px;
+        text-shadow: none;
+        top: 13%;
+        left: 5%;
+        width: 235px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 36px;
+        top: 28%;
+        left: 5%;
+    }    
+}

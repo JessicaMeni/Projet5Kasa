@@ -1,27 +1,59 @@
 header {
-    width: 1440px;
+    max-width: 1440px;
 }
 .App-header {
     display: flex;
     justify-content: space-between;
-    margin: 40px auto;
+    margin: 40px 5em;
 }
 .lmj-logo {
     padding-right: 10px;
 }
 .nav-ul {
     display: flex;
-    align-items: center;
     list-style-type: none;
 }
-.nav-link-link {
-    font-family: Montserrat;
+.nav-li {
+    align-items: center;
+}
+.nav-link{
     font-weight: 500;
     font-size: 24px;
     color: #000000;
     text-decoration: none;
-    padding: 0 25px;
-}
-.nav-link-link:hover {
+    &:hover {
     text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    }
+    &:visited {
+        text-decoration: dotted;
+    }
+}
+.nav-link.apropos{
+    padding: 0 0 0 57px;
+}
+
+@media screen and (max-width: 767px){
+    header{
+        max-width: 100%;
+    }
+    .App-header {
+        margin: 1em 1em 2em 1em;
+    }
+    .lmj-logo {
+        padding-right: 0px;
+        width: 145px;
+        height: auto;
+    }
+    .nav-ul{
+        margin-left: 0px;
+    }
+    .nav-link {
+        font-size: 12px;
+        text-transform: uppercase;
+        
+    }
+    .nav-link.apropos{
+        padding-left: 26px;
+    }
 }
