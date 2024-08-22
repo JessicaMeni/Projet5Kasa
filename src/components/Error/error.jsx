@@ -1,9 +1,18 @@
+import './error.scss'
+
 function Error() {
-    return (
-      <div>
-        <h1>Erreur 404: Oups, Cette page n'existe pas</h1>
-      </div>
-    )
-  }
-  
-  export default Error
+  return (
+    <div className="page-erreur-404">
+      <p className="er-404">404</p>
+      <h1 className="oups404">
+        <span className="retour-ligne">Oups! La page que </span>vous demandez
+        n'existe pas
+      </h1>
+      <a href="./" className="retour-page-accueil">
+        Retournez sur la page d'accueil
+      </a>
+    </div>
+  )
+}
+
+export default Error

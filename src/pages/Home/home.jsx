@@ -1,16 +1,23 @@
 import './home.scss'
 import imgBordDeMer from '../../assets/img-banner/bord-de-mer.png'
+import Card from '../../components/Card/card'
 
 function Home() {
+  const title = 'Chez vous, partout et ailleurs'
   return (
-    <div className="home">
-      <img
-        src={imgBordDeMer}
-        className="banner-bord-de-mer"
-        alt="paysage de bord de mer"
-      />
-      <h1>Chez vous, partout et ailleurs</h1>
-    </div>
+    <main className="home">
+      <section>
+        <img
+          src={imgBordDeMer}
+          className="affichage-bord-de-mer"
+          alt="paysage de bord de mer"
+        />
+        <h1 className="h1-chez-vous">{title}</h1>
+      </section>
+      <section>
+        <Card />
+      </section>
+    </main>
   )
 }
 
