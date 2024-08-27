@@ -1,18 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header/Header'
 import Home from './pages/Home/home'
 /* import Fiche from './pages/FichesDeLogement/ficheDeLogement' */
 import Apropos from './pages/APropos/apropos'
-import Banner from './components/Banner/banner'
+
 import Footer from './components/Footer/footer'
-import Error from './components/Error/error'
+import Error from './components/Error/Error'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
-      <Banner />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/FichesDeLogement" element={<Fiche />} /> */}

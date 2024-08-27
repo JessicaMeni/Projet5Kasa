@@ -1,0 +1,41 @@
+.SECTION {
+  margin: 3em auto;
+}
+.les-valeurs {
+  background-color: #ff6060;
+  width: 80%;
+  height: 3em;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  & .div-valeur {
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+
+    & .button-content {
+      background-color: transparent;
+      & i {
+        color: white;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+      }
+    }
+  }
+
+  & .collapse-content {
+    margin-top: 10px;
+  }
+}

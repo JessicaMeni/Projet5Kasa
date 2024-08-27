@@ -1,4 +1,4 @@
-import './error.scss'
+import './Error.scss'
 
 function Error() {
   return (

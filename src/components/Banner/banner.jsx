@@ -1,29 +1,12 @@
-import './banner.scss'
-import { Link } from 'react-router-dom'
-import logo from '../../assets/logo/LOGO.svg'
+import './Banner.scss'
 
-function Banner() {
+function Banner({ img, title }) {
+  /* const title = 'Chez vous, partout et ailleurs' */
   return (
-    <header className="App-header">
-      <div>
-        <img src={logo} alt="logo Kasa" className="lmj-logo" />
-      </div>
-      <nav>
-        <ul className="nav-ul">
-          <li className="nav-li">
-            <Link className="nav-link accueil" to="./">
-              Accueil
-            </Link>
-          </li>
-          <li className="nav-li">
-            <Link className="nav-link apropos" to="./APropos">
-              A Propos
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <section className="section-banner">
+      <img className="img-banner" src={img} alt={''} />
+      <h1 className="h1-chez-vous">{title}</h1>
+    </section>
   )
 }
-
 export default Banner

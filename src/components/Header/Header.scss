@@ -1,0 +1,66 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5em;
+    max-width: 1240px;
+    margin: auto;
+    
+    & .lmj-logo {
+    padding-right: 10px;
+    }
+    
+    & .nav-ul {
+    display: flex;
+    list-style-type: none;
+    
+        & .nav-li {
+        align-items: center;
+            
+            & .nav-link{
+            font-weight: 500;
+            font-size: 24px;
+            color: #000000;
+            text-decoration: none;
+            &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 0.1em;
+            }
+            & :visited {
+                text-decoration: dotted;
+            }
+            }
+            & .nav-link.apropos{
+                padding: 0 0 0 57px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .header {
+        padding: 0;
+        max-width: 100%;
+        margin: 1.2em;
+        margin-bottom: 2em;
+
+        & .lmj-logo {
+            padding-right: 0px;
+            width: 145px;
+            height: auto;
+        }
+        & .nav-ul{
+            margin-left: 0px;
+
+            & .nav-li {
+
+                & .nav-link {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    
+                }
+                & .nav-link.apropos{
+                    padding-left: 26px;
+                }
+            }
+        }
+    }
+}

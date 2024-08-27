@@ -1,19 +1,14 @@
 import './home.scss'
 import imgBordDeMer from '../../assets/img-banner/bord-de-mer.png'
-import Card from '../../components/Card/card'
+import Card from '../../components/Card/Card'
+import Banner from '../../components/Banner/Banner'
 
 function Home() {
   const title = 'Chez vous, partout et ailleurs'
   return (
     <main className="home">
-      <section>
-        <img
-          src={imgBordDeMer}
-          className="affichage-bord-de-mer"
-          alt="paysage de bord de mer"
-        />
-        <h1 className="h1-chez-vous">{title}</h1>
-      </section>
+      <Banner img={imgBordDeMer} alt={'paysage de bord de mer'} title={title} />{' '}
+      {/* comment ajouter un alt ici? */}
       <section>
         <Card />
       </section>
