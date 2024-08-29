@@ -6,7 +6,9 @@ function Card() {
     <div className="div-gallery">
       {logementsList.map(({ id, title, cover }) => (
         <div key={id} className="article">
-          <img src={cover} alt={title} className="img-gallery"></img>
+          <a href="/logement">
+            <img src={cover} alt={title} className="img-gallery"></img>
+          </a>
           <figcaption className="titre-de-la-location">{title}</figcaption>
         </div>
       ))}

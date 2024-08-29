@@ -1,0 +1,10 @@
+.fiche-de-logement {
+  width: 100%;
+
+  & .carousel-item {
+    float: none;
+  }
+  & .d-block {
+    height: 120px;
+  }
+}

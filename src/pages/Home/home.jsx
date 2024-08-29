@@ -1,5 +1,5 @@
 import './home.scss'
-import imgBordDeMer from '../../assets/img-banner/bord-de-mer.png'
+import imgBordDeMer from '../../assets/img-banner/bord-de-mer.webp'
 import Card from '../../components/Card/Card'
 import Banner from '../../components/Banner/Banner'
 

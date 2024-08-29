@@ -1,51 +1,51 @@
 .section-banner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 223px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 223px;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: black;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+
+  & .img-banner {
+    position: absolute;
+    height: 100%;
     width: 100%;
-    border-radius: 25px;
-    overflow: hidden;
-    background-color: black;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-collapse: collapse;
+    object-fit: cover;
+    opacity: 50%;
+  }
 
-    & .img-banner {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        opacity: 50%;
-    }
-
-    & .h1-chez-vous {
-        color: rgba(255, 255, 255, 1);
-        font-size: 48px;
-        text-shadow: 1px 1px 4px black;
-        z-index: 1;
-        text-align: center;
-        margin: 0;
-    }
+  & .h1-chez-vous {
+    color: rgba(255, 255, 255, 1);
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px black;
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+  }
 }
 
-@media screen and (max-width: 767px){
-
-    .section-banner{
-        height: 7em;
-        border-radius: 10px;
-        & .h1-chez-vous {
-            font-size: 24px;
-            text-shadow: none;
-            width: 60%;
-        }
+@media screen and (max-width: 767px) {
+  .section-banner {
+    height: 7em;
+    border-radius: 10px;
+    & .h1-chez-vous {
+      font-size: 24px;
+      text-shadow: none;
+      width: 60%;
     }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .section-banner{
-        & .h1-chez-vous {
-        font-size: 36px;
-        }
+  .section-banner {
+    & .h1-chez-vous {
+      font-size: 36px;
     }
+  }
 }

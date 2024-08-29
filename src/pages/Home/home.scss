@@ -1,7 +1,7 @@
 .home {
-    padding: 0em 5em 3em 5em;
-    max-width: 1240px;
-    margin: auto;
+  max-width: 1240px;
+  margin: auto;
+  /* padding: 0 2em; */
 }
 
 /*  position: absolute;
@@ -12,14 +12,15 @@
     margin: 0;
     transform: translate(-50%); */
 
-
-@media screen and (max-width: 767px){
-    .home {
-        margin: 1.2em;
-        padding: 0;
-    }
+@media screen and (max-width: 767px) {
+  .home {
+    margin: 1.2em;
+    padding: 0;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    
+@media screen and (min-width: 768px) and (max-width: 1290px) {
+  .home {
+    width: 90%;
+  }
 }
