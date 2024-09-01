@@ -17,21 +17,25 @@
   height: 340px;
   position: relative;
 
-  & .img-gallery {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+  & a {
+    height: 340px;
 
-  & .titre-de-la-location {
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-    width: 80%;
-    position: absolute;
-    top: 75%;
-    left: 5%;
+    & .img-gallery {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    & .titre-de-la-location {
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      width: 80%;
+      position: absolute;
+      top: 75%;
+      left: 5%;
+    }
   }
 }
 
@@ -40,14 +44,10 @@
     background-color: white;
     margin-top: 1em;
     padding: 0;
-    gap: 10px;
+    gap: 1.3rem;
   }
   .article {
     width: 335px;
     height: 255px;
-
-    & .titre-de-la-location {
-      top: 70%;
-    }
   }
 }

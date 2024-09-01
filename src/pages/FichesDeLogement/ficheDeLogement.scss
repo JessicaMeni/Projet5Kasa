@@ -1,0 +1,11 @@
+.fiche-du-logement {
+  display: flex;
+
+  & .div-description-equipements {
+    display: flex;
+
+    & .collapse {
+      width: 100px;
+    }
+  }
+}

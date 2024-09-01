@@ -1,6 +1,10 @@
 .fiche-de-logement {
   width: 100%;
 
+  & .juste-id {
+    display: flex;
+  }
+
   & .carousel-item {
     float: none;
   }

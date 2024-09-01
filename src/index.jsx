@@ -4,10 +4,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './pages/Home/home'
-/* import Fiche from './pages/FichesDeLogement/ficheDeLogement' */
 import Apropos from './pages/APropos/apropos'
-import Fiche from './pages/FichesDeLogement/ficheDeLogement'
-import Footer from './components/Footer/footer'
+import FicheDeLogement from './pages/FichesDeLogement/ficheDeLogement'
+import Footer from './components/Footer/Footer'
 import Error from './components/Error/Error'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -17,10 +16,10 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/FichesDeLogement" element={<Fiche />} /> */}
         <Route path="*" element={<Error />} />
-        <Route path="/Apropos" element={<Apropos />} />
-        <Route path="/logement" element={<Fiche />} />
+        <Route path="/apropos" element={<Apropos />} />
+        {/* <Route path="/logement" element={<Logement />} /> */}
+        <Route path="/logement/annonce/:id" element={<FicheDeLogement />} />
       </Routes>
       <Footer />
       {/* quelle est la bonne ecriture ? celle-ci ou la laisser dans le Route */}

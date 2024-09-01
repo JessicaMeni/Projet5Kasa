@@ -1,30 +1,13 @@
-import { logementsList } from '../../datas/logementsList.js'
+import logements from '../../datas/logements.json'
 import './Fiche.scss'
-import { useState } from 'react'
-import {
-  Button,
-  Collapse,
-} from 'react-bootstrap' /* collapse et button sont des hook. pourquoi importer button ? */
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import Collapse from '../../components/Collapse/Collapse'
 
-export default function Fiche({
-  pictures,
-  title,
-  host,
-  location,
-  tags,
-  rating,
-  description,
-  equipments,
-}) {
-  const [ouvert, setOuvert] = useState(false)
+export default function Fiche() {
   return (
     <div className="fiche-de-logement">
-      {logementsList.map(
+      {logements.map(
         ({
           id,
-          pictures,
           title,
           host,
           location,
@@ -33,43 +16,31 @@ export default function Fiche({
           description,
           equipments,
         }) => (
-          <div key={id} className="juste-id">
-            <div class="carousel-item active">
-              <img
-                class="d-block w-100"
-                src={pictures[0]}
-                alt={title}
-                loading="lazy"
-              ></img>
+          <div key={`${id}`} className="juste-id">
+            <h2 className="titre-de-la-location" key={`${title}-${id}`}>
+              {title}
+            </h2>
+            <div key={`${host.name}-${id}`}>{host.name}</div>
+            <img
+              src={host.picture}
+              alt="portrait de [{host.name}]"
+              key={`${host.picture}-${id}`}
+            ></img>
+            <p key={`${location}-${id}`}>{location}</p>
+            <span key={`${tags}-${id}`}>{tags}</span>
+            <div key={`${rating}-${id}`}>{rating}</div>
+            <div className="div-description-equipements">
+              <Collapse
+                titreducollapse="Description"
+                contenu={description}
+                key={`${description}-${id}`}
+              />
+              <Collapse
+                titreducollapse="Equipement"
+                contenu={equipments}
+                key={`${equipments}-${id}`}
+              />
             </div>
-            <h2 className="titre-de-la-location">{title}</h2>
-            <div>{}</div>
-            <div>{location}</div>
-            <div>{tags}</div>
-            <div>{rating}</div>
-
-            <div className="les-valeurs">
-              <h3>Description</h3>
-              <div className="div-valeur">
-                <Button
-                  className="button-content"
-                  aria-label="bouton-contenu"
-                  /* variant="primary" a quoi ça sert ?*/
-                  onClick={() => setOuvert(!ouvert)}
-                >
-                  <FontAwesomeIcon
-                    icon={faChevronUp}
-                    className={`${ouvert ? 'rotated' : ''}`}
-                  />
-                </Button>
-              </div>
-            </div>
-            <div className="div-collapse">
-              <Collapse in={ouvert}>
-                <p className="collapse-content">{description}</p>
-              </Collapse>
-            </div>
-            <div>{equipments}</div>
           </div>
         )
       )}
