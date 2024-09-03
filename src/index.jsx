@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './pages/Home/home'
 import Apropos from './pages/APropos/apropos'
-import FicheDeLogement from './pages/FichesDeLogement/ficheDeLogement'
+import FicheDeLogement from './pages/LogementPage/logementpage'
 import Footer from './components/Footer/Footer'
 import Error from './components/Error/Error'
 
@@ -18,12 +18,10 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
         <Route path="/apropos" element={<Apropos />} />
-        {/* <Route path="/logement" element={<Logement />} /> */}
-        <Route path="/logement/annonce/:id" element={<FicheDeLogement />} />
+        <Route path="/logement/:id" element={<FicheDeLogement />} />
       </Routes>
       <Footer />
       {/* quelle est la bonne ecriture ? celle-ci ou la laisser dans le Route */}
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )

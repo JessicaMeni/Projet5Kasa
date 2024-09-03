@@ -1,0 +1,22 @@
+.fiche-du-logement {
+  width: 1240px;
+  margin: auto;
+
+  & .div-description-equipements {
+    display: flex;
+    justify-content: space-between;
+
+    & .collapse {
+      width: 36rem;
+      margin: 30px 0px;
+
+      & h2 {
+        font-size: 18px;
+      }
+
+      & .collapse-content {
+        font-weight: 400;
+      }
+    }
+  }
+}

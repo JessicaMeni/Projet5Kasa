@@ -1,14 +1,71 @@
 .fiche-de-logement {
   width: 100%;
 
-  & .juste-id {
+  & .un {
     display: flex;
+    justify-content: space-between;
+
+    & .deux {
+      & .titre-de-logement {
+        color: #ff6060;
+        font-size: 36px;
+        margin: 0;
+        font-weight: 500;
+      }
+      & .localisation {
+        font-size: 18px;
+        margin-top: 0;
+      }
+    }
+
+    & .trois {
+      display: flex;
+      justify-content: space-between;
+      width: 10%;
+
+      & .nom-host-de-logement {
+        color: #ff6060;
+        font-size: 18px;
+        white-space: pre-wrap;
+        /* display: flex;
+        align-items: center; */
+        padding-top: 5%;
+      }
+      & .img-host-de-logement {
+        border-radius: 50px;
+        height: 64px;
+        width: 64px;
+        /* align-self: center; */
+      }
+    }
   }
 
-  & .carousel-item {
-    float: none;
-  }
-  & .d-block {
-    height: 120px;
+  & .quatre {
+    display: flex;
+    justify-content: space-between;
+    & .tags {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+
+      & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #ff6060;
+        width: 115px;
+        min-height: 25px;
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+        border-radius: 10px;
+      }
+    }
+
+    & .rating {
+      font-size: 18px;
+    }
   }
 }

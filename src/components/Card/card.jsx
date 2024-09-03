@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom'
 function Card() {
   return (
     <div className="div-gallery">
-      {logements.map((annonce) => (
-        <div key={annonce.id} className="article">
-          <Link to={`/logement/${annonce.id}`}>
+      {logements.map((logement) => (
+        <div key={logement.id} className="article">
+          <Link to={`/logement/${logement.id}`}>
             <img
-              src={annonce.cover}
-              alt={annonce.title}
+              src={logement.cover}
+              alt={logement.title}
               className="img-gallery"
             ></img>
             <figcaption className="titre-de-la-location">
-              {annonce.title}
+              {logement.title}
             </figcaption>
           </Link>
         </div>
