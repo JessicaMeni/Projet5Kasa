@@ -1,0 +1,32 @@
+.carousel-item {
+  width: 1240px;
+  height: 412px;
+  position: relative;
+
+  & .img-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  & .carousel-button {
+    position: absolute;
+    height: 2rem;
+
+    & .svg-inline--fa {
+      color: white;
+      font-size: 79.2px;
+    }
+  }
+
+  & .prev-button {
+    left: 1rem;
+    top: 10rem;
+  }
+
+  & .next-button {
+    right: 1rem;
+    top: 10rem;
+  }
+}

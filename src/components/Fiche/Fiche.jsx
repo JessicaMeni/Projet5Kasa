@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom'
 import logements from '../../datas/logements.json'
 import './Fiche.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 export default function Fiche() {
   const { id } = useParams()
@@ -43,6 +45,7 @@ export default function Fiche() {
 
         <div key={`rating-${logements.id}`} className="rating">
           {logement.rating}
+          <FontAwesomeIcon icon={faStar} />
         </div>
       </div>
     </div>

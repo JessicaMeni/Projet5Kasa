@@ -1,5 +1,5 @@
 .fiche-du-logement {
-  width: 1240px;
+  max-width: 1240px;
   margin: auto;
 
   & .div-description-equipements {
@@ -16,6 +16,11 @@
 
       & .collapse-content {
         font-weight: 400;
+        font-size: 18px;
+
+        & li {
+          font-weight: 400;
+        }
       }
     }
   }
