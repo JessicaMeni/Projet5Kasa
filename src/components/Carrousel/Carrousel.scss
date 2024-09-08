@@ -17,6 +17,7 @@
     & .svg-inline--fa {
       color: white;
       font-size: 79.2px;
+      cursor: pointer;
     }
   }
 
@@ -28,5 +29,31 @@
   & .next-button {
     right: 1rem;
     top: 10rem;
+  }
+
+  & .compteur-de-photo {
+    position: absolute;
+    font-size: 18px;
+    left: 50%;
+    bottom: 24px;
+    color: white;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel-item {
+    width: 90%;
+    height: 255px;
+    margin: auto;
+
+    & .img-slide {
+      border-radius: 10px;
+    }
+    & .carousel-button {
+      top: 7rem;
+
+      & .svg-inline--fa {
+        height: 24px;
+      }
+    }
   }
 }

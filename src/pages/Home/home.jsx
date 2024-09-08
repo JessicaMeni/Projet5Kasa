@@ -1,6 +1,6 @@
 import './home.scss'
 import imgBordDeMer from '../../assets/img-banner/bord-de-mer.webp'
-import Card from '../../components/Card/Card'
+import Gallery from '../../components/Gallery/Gallery'
 import Banner from '../../components/Banner/Banner'
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
       <Banner img={imgBordDeMer} alt={'paysage de bord de mer'} title={title} />{' '}
       {/* comment ajouter un alt ici? */}
       <section>
-        <Card />
+        <Gallery />
       </section>
     </main>
   )

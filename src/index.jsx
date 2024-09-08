@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './pages/Home/home'
-import Apropos from './pages/APropos/apropos'
-import FicheDeLogement from './pages/LogementPage/logementpage'
-import Footer from './components/Footer/Footer'
 import Error from './components/Error/Error'
+import Apropos from './pages/APropos/apropos'
+import LogementPage from './pages/LogementPage/logementpage'
+import Footer from './components/Footer/Footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -18,7 +18,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
         <Route path="/apropos" element={<Apropos />} />
-        <Route path="/logement/:id" element={<FicheDeLogement />} />
+        <Route path="/logement/:id" element={<LogementPage />} />
       </Routes>
       <Footer />
       {/* quelle est la bonne ecriture ? celle-ci ou la laisser dans le Route */}

@@ -5,10 +5,8 @@ import Fiche from '../../components/Fiche/Fiche'
 import Error from '../../components/Error/Error'
 import Collapse from '../../components/Collapse/Collapse'
 import Carrousel from '../../components/Carrousel/Carrousel'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function FicheDeLogement() {
+function LogementPage() {
   const { id } = useParams()
   const logement = logements.find(
     (logement) => logement.id === id
@@ -20,7 +18,6 @@ function FicheDeLogement() {
       </div>
     )
   }
-
   return (
     <main className="fiche-du-logement">
       <div>
@@ -29,7 +26,6 @@ function FicheDeLogement() {
           pictures={logement.pictures}
           altdelimage={logement.title}
         />
-        <br></br>
         <Fiche />
         <div className="div-description-equipements">
           <Collapse
@@ -50,4 +46,4 @@ function FicheDeLogement() {
   )
 }
 
-export default FicheDeLogement
+export default LogementPage

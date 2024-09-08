@@ -10,42 +10,35 @@ export default function Fiche() {
 
   return (
     <div key={`${id}`} className="fiche-de-logement">
-      <div className="un">
-        <div className="deux">
-          <h2 className="titre-de-logement" key={`title-${logement.id}`}>
-            {logement.title}
-          </h2>
-          <p key={`location-${logements.id}`} className="localisation">
-            {logement.location}
-          </p>
-        </div>
-
-        <div className="trois">
-          <span
-            className="nom-host-de-logement"
-            key={`host.name-${logements.id}`}
-          >
-            {logement.host.name.replace(' ', '\n')}
-          </span>
-          <img
-            src={logement.host.picture}
-            alt="portrait de [{logements.host.name}]"
-            key={`logements.host.picture-${logements.id}`}
-            className="img-host-de-logement"
-          ></img>
-        </div>
-      </div>
-
-      <div className="quatre">
+      <div className="title-location-tags-div">
+        <h2 className="titre-de-logement" key={`title-${logement.id}`}>
+          {logement.title}
+        </h2>
+        <p key={`location-${logements.id}`} className="localisation">
+          {logement.location}
+        </p>
         <ul key={`tags-${logements.id}`} className="tags">
           {logement.tags.map((tag, index) => (
             <li key={index}>{tag}</li>
           ))}
         </ul>
+      </div>
 
+      <div className="rating-host-div">
         <div key={`rating-${logements.id}`} className="rating">
           {logement.rating}
           <FontAwesomeIcon icon={faStar} />
+        </div>
+        <div className="host-div">
+          <div className="host-name" key={`host.name-${logements.id}`}>
+            {logement.host.name.replace(' ', '\n')}
+          </div>
+          <img
+            className="host-pic"
+            src={logement.host.picture}
+            alt="portrait de [{logements.host.name}]"
+            key={`logements.host.picture-${logements.id}`}
+          ></img>
         </div>
       </div>
     </div>

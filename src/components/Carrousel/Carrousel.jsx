@@ -6,38 +6,41 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
 
-/* import Slider from 'react-slick' */
-/* import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css' */
-
 function Carrousel({ pictures, altdelimage }) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [index, setIndex] = useState(0)
+  const picture = pictures[index]
 
-  const handlePrev = () => {
-    setCurrentIndex((current) =>
-      current === 0 ? pictures.lenght - 1 : current - 1
-    )
+  const previous = () => {
+    let newIndex = index - 1
+    if (newIndex < 0) {
+      newIndex = pictures.length - 1 /* -1 pcq les tableaux commencent par 0 */
+    }
+    setIndex(newIndex)
   }
-  const handleNext = () => {
-    setCurrentIndex((current) =>
-      current === pictures.length - 1 ? 0 : current + 1
-    )
+
+  const next = () => {
+    let newIndex = index + 1
+    if (newIndex > pictures.length - 1) {
+      newIndex = 0
+    }
+    setIndex(newIndex)
   }
 
   return (
-    <div class="carousel-item">
+    <div className="carousel-item">
       <img
         className="img-slide"
-        src={pictures[currentIndex]}
+        src={picture}
         alt={altdelimage} /* loading="lazy" */
       ></img>
-      <span className="carousel-button prev-button" onClick={handlePrev}>
-        {''}
+      <span className="carousel-button prev-button" onClick={previous}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </span>
-      <span className="carousel-button next-button" onClick={handleNext}>
-        {''}
+      <span className="carousel-button next-button" onClick={next}>
         <FontAwesomeIcon icon={faChevronRight} />
+      </span>
+      <span className="compteur-de-photo">
+        {index + 1} /{pictures.length}
       </span>
     </div>
   )

@@ -1,8 +1,8 @@
-import './Card.scss'
+import './Gallery.scss'
 import logements from '../../datas/logements.json'
 import { Link } from 'react-router-dom'
 
-function Card() {
+function Gallery() {
   return (
     <div className="div-gallery">
       {logements.map((logement) => (
@@ -23,5 +23,4 @@ function Card() {
   )
 }
 
-export default Card
-/*   <a href={'logement-' + id}> */
+export default Gallery

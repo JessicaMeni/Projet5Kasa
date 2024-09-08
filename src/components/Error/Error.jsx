@@ -8,7 +8,7 @@ function Error() {
         <span className="retour-ligne">Oups! La page que </span>vous demandez
         n'existe pas
       </h1>
-      <a href="./" className="retour-page-accueil">
+      <a href="/" className="retour-page-accueil">
         Retournez sur la page d'accueil
       </a>
     </div>
