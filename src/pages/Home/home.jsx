@@ -4,7 +4,11 @@ import Gallery from '../../components/Gallery/Gallery'
 import Banner from '../../components/Banner/Banner'
 
 function Home() {
-  const title = 'Chez vous, partout et ailleurs'
+  const title = (
+    <>
+      Chez vous, <span className="line-break">partout et ailleurs</span>{' '}
+    </>
+  ) /* <wbr> &nbsp;  */
   return (
     <main className="home">
       <Banner img={imgBordDeMer} alt={'paysage de bord de mer'} title={title} />{' '}

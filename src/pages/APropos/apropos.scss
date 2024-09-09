@@ -1,5 +1,18 @@
-.a-propos{
-    & .img-banner {
-        opacity: 65%;;
+.a-propos {
+  & .img-banner {
+    opacity: 65%;
+  }
+  & .collapse {
+    width: 83%;
+    margin: 30px auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .a-propos {
+    & .collapse {
+      width: 100%;
+      margin: 20px auto;
     }
+  }
 }

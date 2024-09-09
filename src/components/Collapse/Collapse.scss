@@ -1,49 +1,49 @@
 .collapse {
-  width: 83%;
-  margin: 30px auto;
-}
-.titre-collapse {
-  background-color: #ff6060;
-  height: 3em;
-  border-radius: 5px;
-  padding: 0 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 30px 0;
 
-  & h2 {
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  & .div-icon-chevron-up {
+  .collapse-title-icon {
+    background-color: #ff6060;
+    height: 3em;
+    border-radius: 5px;
+    padding: 0 1em;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 
-    & .fa-chevron-up {
-      transition: transform 0.5s ease; /* Transition douce pour la rotation */
-    }
-    & .rotated {
-      transform: rotate(-180deg);
-    }
-    & .svg-inline--fa {
+    & h2 {
       color: white;
       font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    & .div-icon-chevron-up {
+      display: flex;
+      justify-content: flex-end;
+
+      & .fa-chevron-up {
+        transition: transform 0.5s ease; /* Transition douce pour la rotation */
+      }
+      & .rotated {
+        transform: rotate(-180deg);
+      }
+      & .svg-inline--fa {
+        color: white;
+        font-size: 24px;
+      }
     }
   }
 }
 .div-collapse {
-  background-color: #f6f6f673;
   display: grid;
   grid-template-rows: 0fr;
-  padding: 0rem 0.5rem;
+  padding: 0.1rem 0.5rem;
   transition: grid-template-rows 0.5s ease, padding 0.5s ease;
 
   &.ouvert {
+    background-color: #f6f6f673;
     grid-template-rows: 1fr;
-    padding: 1.8rem 0.5rem;
+    padding: 1.1rem 0.5rem;
   }
 
   & .collapse-content {
@@ -56,30 +56,69 @@
 
 @media screen and (max-width: 767px) {
   .collapse {
-    width: 100%;
-  }
-  .titre-collapse {
-    height: 30px;
+    /* width: 100%; */
 
-    & h2 {
-      font-size: 13px;
-      font-weight: 700;
+    & .collapse-title-icon {
+      height: 30px;
+
+      & h2 {
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      & .div-icon-chevron-up {
+        display: flex;
+        justify-content: flex-end;
+
+        & .svg-inline--fa {
+          font-size: 16px;
+        }
+      }
     }
 
-    & .div-icon-chevron-up {
-      display: flex;
-      justify-content: flex-end;
-
-      & .svg-inline--fa {
-        font-size: 16px;
+    & .div-collapse {
+      & .collapse-content {
+        font-weight: 400;
+        font-size: 12px;
       }
     }
   }
 
-  .div-collapse {
-    & .collapse-content {
-      font-weight: 400;
-      font-size: 12px;
+  .page-logement {
+    width: fit-content;
+
+    & .div-description-equipements {
+      flex-direction: column;
+      margin: auto;
+
+      & .collapse {
+        width: 100%;
+        margin: 10px 0px;
+
+        & .collapse-title-icon {
+          height: 30px;
+
+          & h2 {
+            font-size: 13px;
+            font-weight: 700;
+          }
+
+          & .div-icon-chevron-up {
+            display: flex;
+            justify-content: flex-end;
+
+            & .svg-inline--fa {
+              font-size: 16px;
+            }
+          }
+        }
+        & .div-collapse {
+          & .collapse-content {
+            font-weight: 400;
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 }

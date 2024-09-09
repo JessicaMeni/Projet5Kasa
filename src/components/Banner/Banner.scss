@@ -19,7 +19,8 @@
     opacity: 50%;
   }
 
-  & .h1-chez-vous {
+  & .h1-chez-vous,
+  .line-break {
     color: rgba(255, 255, 255, 1);
     font-size: 48px;
     font-weight: 700;
@@ -34,17 +35,20 @@
   .section-banner {
     height: 7em;
     border-radius: 10px;
-    & .h1-chez-vous {
+    & .h1-chez-vous,
+    .line-break {
+      text-align: left;
       font-size: 24px;
       text-shadow: none;
-      width: 60%;
+      width: 90%;
     }
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .section-banner {
-    & .h1-chez-vous {
+    & .h1-chez-vous,
+    .line-break {
       font-size: 36px;
     }
   }

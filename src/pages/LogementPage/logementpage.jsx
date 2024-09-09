@@ -19,28 +19,26 @@ function LogementPage() {
     )
   }
   return (
-    <main className="fiche-du-logement">
-      <div>
-        <Carrousel
-          key={`pictures-${logements.id}`}
-          pictures={logement.pictures}
-          altdelimage={logement.title}
+    <main className="page-logement">
+      <Carrousel
+        key={`pictures-${logements.id}`}
+        pictures={logement.pictures}
+        altdelimage={logement.title}
+      />
+      <Fiche />
+      <div className="div-description-equipements">
+        <Collapse
+          titreducollapse="Description"
+          key={`description-${logements.id}`}
+          contenu={logement.description}
         />
-        <Fiche />
-        <div className="div-description-equipements">
-          <Collapse
-            titreducollapse="Description"
-            key={`description-${logements.id}`}
-            contenu={logement.description}
-          />
-          <Collapse
-            titreducollapse="Equipement"
-            key={`equipment-${logements.id}`}
-            contenu={logement.equipments.map((equipment, index) => (
-              <li key={index}>{equipment}</li>
-            ))}
-          />
-        </div>
+        <Collapse
+          titreducollapse="Équipements"
+          key={`equipment-${logements.id}`}
+          contenu={logement.equipments.map((equipment, index) => (
+            <li key={index}>{equipment}</li>
+          ))}
+        />
       </div>
     </main>
   )

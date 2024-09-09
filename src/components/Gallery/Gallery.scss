@@ -16,7 +16,18 @@
   width: 340px;
   height: 340px;
   position: relative;
-
+  & .gallery-gradient {
+    position: absolute;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.4) 85%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+  }
   & a {
     height: 340px;
 
@@ -33,7 +44,7 @@
       font-weight: 700;
       width: 80%;
       position: absolute;
-      top: 75%;
+      top: 80%;
       left: 5%;
     }
   }

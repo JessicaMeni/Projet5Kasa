@@ -7,6 +7,13 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 export default function Fiche() {
   const { id } = useParams()
   const logement = logements.find((logement) => logement.id === id)
+  const stars = Array.from({ length: 5 }, (_, nbr) => {
+    return nbr < logement.rating ? (
+      <FontAwesomeIcon icon={faStar} className="orange-star" />
+    ) : (
+      <FontAwesomeIcon icon={faStar} className="grey-star" />
+    )
+  })
 
   return (
     <div key={`${id}`} className="fiche-de-logement">
@@ -26,9 +33,13 @@ export default function Fiche() {
 
       <div className="rating-host-div">
         <div key={`rating-${logements.id}`} className="rating">
-          {logement.rating}
-          <FontAwesomeIcon icon={faStar} />
+          {stars.map((star, index) => (
+            <span key={index} className="star-icon">
+              {star}
+            </span>
+          ))}
         </div>
+
         <div className="host-div">
           <div className="host-name" key={`host.name-${logements.id}`}>
             {logement.host.name.replace(' ', '\n')}

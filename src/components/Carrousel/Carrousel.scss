@@ -41,7 +41,7 @@
 }
 @media screen and (max-width: 767px) {
   .carousel-item {
-    width: 90%;
+    width: fit-content;
     height: 255px;
     margin: auto;
 
@@ -54,6 +54,9 @@
       & .svg-inline--fa {
         height: 24px;
       }
+    }
+    & .compteur-de-photo {
+      display: none;
     }
   }
 }

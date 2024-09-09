@@ -8,7 +8,7 @@ export default function Collapse({ titreducollapse, contenu }) {
 
   return (
     <section className="collapse">
-      <div className="titre-collapse">
+      <div className="collapse-title-icon">
         <h2>{titreducollapse}</h2>
         <div className="div-icon-chevron-up" onClick={() => setOuvert(!ouvert)}>
           <FontAwesomeIcon

@@ -1,7 +1,9 @@
 .home {
   max-width: 1240px;
   margin: auto;
-  /* padding: 0 2em; */
+  & .line-break {
+    display: inline;
+  }
 }
 
 /*  position: absolute;
@@ -16,10 +18,13 @@
   .home {
     margin: 1.2em;
     padding: 0;
+    & .line-break {
+      display: block; /* Force le retour à la ligne sur mobile */
+    }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1290px) {
+@media screen and (min-width: 768px) and (max-width: 1390px) {
   .home {
     width: 90%;
   }

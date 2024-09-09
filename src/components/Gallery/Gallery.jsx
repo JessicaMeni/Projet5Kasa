@@ -7,6 +7,7 @@ function Gallery() {
     <div className="div-gallery">
       {logements.map((logement) => (
         <div key={logement.id} className="article">
+          <div className="gallery-gradient"></div>
           <Link to={`/logement/${logement.id}`}>
             <img
               src={logement.cover}

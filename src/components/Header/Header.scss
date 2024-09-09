@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 40px 2em;
+  padding: 40px 0;
   max-width: 1240px;
   margin: auto;
 
@@ -69,5 +69,11 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1390px) {
+  .header {
+    width: 90%;
   }
 }

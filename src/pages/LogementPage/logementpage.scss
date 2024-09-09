@@ -1,4 +1,4 @@
-.fiche-du-logement {
+.page-logement {
   max-width: 1240px;
   margin: auto;
 
@@ -7,9 +7,6 @@
     justify-content: space-between;
 
     & .collapse {
-      width: 36rem;
-      margin: 30px 0px;
-
       & h2 {
         font-size: 18px;
       }
@@ -25,14 +22,21 @@
     }
   }
 }
-@media screen and (max-width: 767px) {
-  .fiche-du-logement {
-    min-width: 375px;
+@media screen and (min-width: 768px) {
+  .div-description-equipements {
+    & .collapse {
+      width: 36rem;
+    }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1290px) {
-  .fiche-du-logement {
-    width: 100%;
+@media screen and (max-width: 767px) {
+  .page-logement {
+    width: 90%;
+
+    & .div-description-equipements {
+      flex-direction: column;
+      margin: auto;
+    }
   }
 }

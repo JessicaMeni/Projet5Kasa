@@ -16,6 +16,7 @@
     }
     & .tags {
       display: flex;
+      flex-wrap: wrap;
       list-style-type: none;
       padding: 0;
       margin: 0;
@@ -25,8 +26,7 @@
         align-items: center;
         text-align: center;
         background-color: #ff6060;
-        width: 115px;
-        min-height: 25px;
+        height: 25px;
         margin-right: 10px;
         font-size: 14px;
         font-weight: 700;
@@ -38,24 +38,39 @@
 
   & .rating-host-div {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
     & .rating {
-      font-size: 18px;
+      font-size: 24px;
+      order: 2;
+      margin: auto;
+      & .star-icon {
+        display: inline-block;
+        margin-left: 8px;
+      }
+
+      & .orange-star {
+        color: #ff6060;
+      }
+      & .grey-star {
+        color: #e3e3e3;
+      }
     }
     & .host-div {
       display: flex;
-      justify-content: space-between;
+      justify-content: end;
+      align-items: center;
+      order: 1;
 
       & .host-name {
         color: #ff6060;
         font-size: 18px;
+        text-align: end;
         white-space: pre-wrap;
-        padding-top: 10%;
-        padding-right: 10px;
+        padding-right: 12px;
       }
       & .host-pic {
-        border-radius: 50px;
+        border-radius: 100%;
         height: 64px;
         width: 64px;
         /* align-self: center; */
@@ -63,45 +78,60 @@
     }
   }
 }
-@media screen and (max-width: 767px) {
-  .fiche-de-logement {
-    width: 90%;
-    margin: auto;
 
-    .un {
-      flex-direction: column;
-
-      & .deux {
-        & .titre-de-logement {
-          font-size: 18px;
-        }
-
-        & .localisation {
-          font-size: 14px;
-        }
-      }
-
-      & .trois {
-        & .nom-host-de-logement {
-          font-size: 12px;
-        }
-        & .img-host-de-logement {
-          width: 32px;
-          height: 32px;
-        }
-      }
-
-      & .quatre {
-        & li {
-          font-size: 10px;
-        }
-      }
+@media screen and (min-width: 768px) {
+  .tags {
+    & li {
+      min-width: 115px;
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1290px) {
-  .un {
+@media screen and (max-width: 767px) {
+  .fiche-de-logement {
     flex-direction: column;
+
+    & .title-location-tags-div {
+      & .titre-de-logement {
+        font-size: 18px;
+      }
+      & .localisation {
+        font-size: 14px;
+      }
+      & .tags {
+        & li {
+          font-size: 10px;
+          height: 18px;
+          min-width: 84px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    & .rating-host-div {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+
+      & .rating {
+        order: 1;
+        font-size: 13px;
+        margin: auto 0;
+        & .star-icon {
+          margin-left: 0px;
+          margin-right: 8px;
+        }
+      }
+      & .host-div {
+        order: 2;
+        & .host-name {
+          font-size: 12px;
+        }
+        & .host-pic {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
   }
 }

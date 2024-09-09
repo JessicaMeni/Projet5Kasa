@@ -3,7 +3,7 @@
   display: grid;
   justify-items: center;
   padding: 1em;
-  margin-top: auto;
+  margin-top: 2em;
 }
 .lmj-logo-footer {
   /*     filter: grayscale(100%) brightness(2); */
@@ -20,13 +20,16 @@
 }
 
 @media screen and (max-width: 767px) {
-  .lmj-logo-footer {
-    padding-bottom: 1em;
-  }
-  .span-footer {
-    font-size: 12px;
-    padding-left: 35%;
-    padding-right: 35%;
-    padding-bottom: 3em;
+  .footer-background {
+    margin-top: 1em;
+    .lmj-logo-footer {
+      padding-bottom: 1em;
+    }
+    .span-footer {
+      font-size: 12px;
+      padding-left: 35%;
+      padding-right: 35%;
+      padding-bottom: 3em;
+    }
   }
 }
