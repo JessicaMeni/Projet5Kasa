@@ -18,21 +18,21 @@ export default function Fiche() {
   return (
     <div key={`${id}`} className="fiche-de-logement">
       <div className="title-location-tags-div">
-        <h2 className="titre-de-logement" key={`title-${logement.id}`}>
+        <h2 key={`title-${logement.id}`} className="titre-de-logement">
           {logement.title}
         </h2>
-        <p key={`location-${logements.id}`} className="localisation">
+        <p key={`location-${logement.id}`} className="localisation">
           {logement.location}
         </p>
-        <ul key={`tags-${logements.id}`} className="tags">
+        <ul className="tags">
           {logement.tags.map((tag, index) => (
-            <li key={index}>{tag}</li>
+            <li key={`tag-${logement.id}-${index}`}>{tag}</li>
           ))}
         </ul>
       </div>
 
       <div className="rating-host-div">
-        <div key={`rating-${logements.id}`} className="rating">
+        <div key={`rating-${logement.id}`} className="rating">
           {stars.map((star, index) => (
             <span key={index} className="star-icon">
               {star}
@@ -41,14 +41,14 @@ export default function Fiche() {
         </div>
 
         <div className="host-div">
-          <div className="host-name" key={`host.name-${logements.id}`}>
+          <div className="host-name" key={`host.name-${logement.id}`}>
             {logement.host.name.replace(' ', '\n')}
           </div>
           <img
             className="host-pic"
             src={logement.host.picture}
-            alt="portrait de [{logements.host.name}]"
-            key={`logements.host.picture-${logements.id}`}
+            alt={`portrait de ${logement.host.name}`}
+            key={`host.picture-${logement.id}`}
           ></img>
         </div>
       </div>

@@ -22,17 +22,13 @@
           font-size: 24px;
           color: #000000;
           text-decoration: none;
-          padding: 0; /* j'ai du ajouter ça à cause de bootstrap */
-          display: inline; /* j'ai du ajouter ça à cause de bootstrap */
-          &:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 0.1em;
-          }
-          &:visited {
-            text-decoration: dotted;
-          }
         }
-        & .nav-link.apropos {
+        & .active-link {
+          text-decoration: underline;
+          text-decoration-thickness: 0.1em;
+        }
+
+        & .apropos {
           padding: 0 0 0 57px;
         }
       }
@@ -42,9 +38,8 @@
 @media screen and (max-width: 767px) {
   .header {
     padding: 0;
-    max-width: 100%;
-    margin: 1.2em;
-    margin-bottom: 2em;
+    width: 90%;
+    margin: 1.2em auto 2em auto;
 
     & .lmj-logo {
       padding-right: 0px;

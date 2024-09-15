@@ -8,11 +8,10 @@ function Home() {
     <>
       Chez vous, <span className="line-break">partout et ailleurs</span>{' '}
     </>
-  ) /* <wbr> &nbsp;  */
+  )
   return (
     <main className="home">
       <Banner img={imgBordDeMer} alt={'paysage de bord de mer'} title={title} />{' '}
-      {/* comment ajouter un alt ici? */}
       <section>
         <Gallery />
       </section>

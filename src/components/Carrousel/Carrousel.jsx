@@ -28,20 +28,20 @@ function Carrousel({ pictures, altdelimage }) {
 
   return (
     <div className="carousel-item">
-      <img
-        className="img-slide"
-        src={picture}
-        alt={altdelimage} /* loading="lazy" */
-      ></img>
-      <span className="carousel-button prev-button" onClick={previous}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </span>
-      <span className="carousel-button next-button" onClick={next}>
-        <FontAwesomeIcon icon={faChevronRight} />
-      </span>
-      <span className="compteur-de-photo">
-        {index + 1} /{pictures.length}
-      </span>
+      <img className="img-slide" src={picture} alt={altdelimage}></img>
+      {pictures.length > 1 && (
+        <>
+          <span className="carousel-button prev-button" onClick={previous}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </span>
+          <span className="carousel-button next-button" onClick={next}>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </span>
+          <span className="compteur-de-photo">
+            {index + 1} /{pictures.length}
+          </span>
+        </>
+      )}
     </div>
   )
 }

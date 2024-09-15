@@ -21,7 +21,6 @@ root.render(
         <Route path="/logement/:id" element={<LogementPage />} />
       </Routes>
       <Footer />
-      {/* quelle est la bonne ecriture ? celle-ci ou la laisser dans le Route */}
     </Router>
   </React.StrictMode>
 )

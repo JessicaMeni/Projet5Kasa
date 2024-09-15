@@ -44,13 +44,13 @@
       font-weight: 700;
       width: 80%;
       position: absolute;
-      top: 80%;
+      top: 75%;
       left: 5%;
     }
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .div-gallery {
     background-color: white;
     margin-top: 1em;
@@ -58,7 +58,7 @@
     gap: 1.3rem;
   }
   .article {
-    width: 335px;
-    height: 255px;
+    width: fit-content;
+    height: fit-content;
   }
 }
